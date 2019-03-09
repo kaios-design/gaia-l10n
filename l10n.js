@@ -1549,7 +1549,7 @@
 
 
 
-  var rtlList = ['ar', 'he', 'fa', 'ps', 'ar-x-psbidi', 'ur'];
+  var rtlList = ['ar', 'he', 'fa', 'ps', 'ar-x-psbidi', 'ur', 'ks'];
   var nodeObserver = null;
   var pendingElements = null;
 
