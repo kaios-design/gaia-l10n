@@ -10,3 +10,34 @@ Gaia l10n derived a lot from original [webL10n](https://github.com/fabi1cazenave
 ## KaiOS
 
 [KaiOS](https://developer.kaiostech.com/) still uses `l10n.js` as its localization lib.
+
+## Quick Start
+
+Here’s a quick way to get a multilingual HTML page:
+
+- index.html - need these metas and link to properties file
+```html
+<head>
+  <meta name="defaultLanguage" content="en-US" />
+  <meta name="availableLanguages" content="en-US, zh-CN" />
+  <link rel="localization" href="./locales/sample.{locale}.properties" />
+  <script defer src="./l10n.js"></script>
+</head>
+<body>
+  <button data-l10n-id="test" title="click me!"></button>
+</body>
+```
+
+- sample.{locale}.properties - key value pair
+```properties
+test = test button
+```
+
+It will get values for each 'data-l10n-id' and fill the translation to element's textContent. Use code below in browser console to switch language and check if it's successfully translated.
+```
+navigator.mozL10n.language.code = 'en-US'; // 'zh-CN'
+```
+
+The `sample/` demo works <b>on Firefox, not Chrome.</b>
+
+Check [App localization code best practices](https://developer.mozilla.org/en-US/docs/Archive/B2G_OS/Firefox_OS_apps/Localization/Localization_code_best_practices) at MDN for l10n best practices.
