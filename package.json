@@ -2,7 +2,6 @@
   "name": "kaios-gaia-l10n",
   "version": "0.0.1",
   "main": "l10n.js",
-  "license": "Apache 2.0",
-  "repository": "git@github.com:jzhangs/gaia-l10n.git",
-  "author": "Jin ZHANG <jz.zhangjin@gmail.com>"
+  "license": "Apache-2.0",
+  "dependencies": {}
 }
